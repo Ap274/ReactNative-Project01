@@ -14,6 +14,10 @@ export function Home() {
       return Alert.alert('Participante Existe', 'Já existe um participante na lista com esse nome')
     }
 
+    if (participantName === '') {
+      return Alert.alert('Participante vazio', 'Adicione o nome de algum participante')
+    }
+
     setParticipants(prevState => [...prevState, participantName]);
     setParticipantName('');  
   }
@@ -34,11 +38,11 @@ export function Home() {
   return (
     <View style={styles.container}>
       <Text style={styles.eventName}>
-        Nome do Evento
+        Stefany's Birthday 🎂
       </Text>
       
       <Text style={styles.eventDate}>
-        Sexta, 29 de setembro de 2023
+        Day: 22 de Outubro de 2023
       </Text>
 
       <View style={styles.form}>
